@@ -1,0 +1,48 @@
+3 start
+queue_start:200
+queue_length:5
+
+start:7 queue_start rear
+7 queue_start front
+2 rear one rear
+7 rear is_empty
+2 front one front
+1 queue_start queue_length is_full
+2 is_full one is_full
+check_operation:6 input
+
+4 input one enqueue
+4 input zero dequeue
+3 stop
+
+enqueue:4 rear is_full stop
+4 rear is_empty do_initialize
+1 rear one rear
+value_put:6 rear:0
+          3 check_operation
+
+do_initialize:1 rear one rear
+1 front one front
+7 rear put
+6 put:0
+3 check_operation
+ 
+dequeue:4 front is_empty stop
+4 rear front do_remove
+
+7 front pop 
+7 zero pop:0
+1 front one front
+3 check_operation
+
+do_remove:7 zero front:0
+7 is_empty rear
+7 is_empty front 
+3 check_operation
+
+stop:9
+one:1
+zero:0
+is_empty:0
+is_full:0
+input:0
