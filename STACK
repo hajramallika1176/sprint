@@ -1,0 +1,37 @@
+3 start
+stack_start:100
+stack_length:6
+start:7 stack_start top
+        2 top one top
+       7 top underflow
+
+    1 stack_start stack_length overflow
+    2 overflow one overflow
+
+operation:6 input
+                 
+
+4 input one do_push
+4 input zero do_pop 
+3 stop
+
+
+do_push:4 top overflow stop
+1 top one top
+6 top:0
+3 operation 
+
+do_pop:4 top underflow stop
+7 top pop
+7 zero pop:0
+2 top one top
+3 operation
+
+
+stop:9
+one:1
+zero:0
+underflow:0
+overflow:0
+check_operation:0
+input:0
