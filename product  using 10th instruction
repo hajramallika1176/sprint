@@ -1,0 +1,42 @@
+3 start
+starting_address:s1
+start:7 starting_address p_pointer
+7 p_pointer:0 instruction
+
+check:4  instruction ten do_product
+
+do_product:1 p_pointer one p_pointer
+7  p_pointer p_tab1
+7 p_tab1:0 number1
+
+1 p_pointer one p_pointer
+7  p_pointer p_tab2
+7 p_tab2:0 number2
+
+1 p_pointer one p_pointer
+7  p_pointer p_tab3
+7 p_tab3:0 result_tab
+
+1 number1 starting_address number1
+2 number1 one number1
+
+1 number2 starting_address number2
+2 number2 one number2
+
+1 result_tab starting_address result_tab
+2 result_tab one result_tab
+
+check1:4 count number1:0 c_product
+1 product number2:0 product
+1 count one count
+3 check1
+ c_product:7 product result_tab:0
+stop:9
+ten:10
+count:0
+one:1
+product:0
+instruction:0
+0 0 0 0 0 0 0 0 0 0 
+s1:10 2 9 3 9 0 0 0 16
+
