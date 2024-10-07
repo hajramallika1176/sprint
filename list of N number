@@ -1,0 +1,12 @@
+3 start
+starting_address_of_the_list:100
+length_of_the_list:6
+start:7 starting_address_of_the_list address1
+check1:4 count length_of_the_list stop
+6 address1:0
+1 address1 one address1
+1 count one count
+3 check1
+stop:9
+count:0
+one:1
