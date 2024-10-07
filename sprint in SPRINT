@@ -1,0 +1,190 @@
+ 3 start
+starting_address:s1
+start:7 starting_address arrow
+copy:7 arrow:0 instruction
+
+check0:4 instruction zero do_v_copy 
+3 check1
+do_v_copy:1 arrow one arrow
+7 arrow c_value
+7  c_value:0 c_final_tab1
+ 
+1 arrow one arrow
+7 arrow c_v_tab1
+7 c_v_tab1:0 c_final_tab2
+
+1 c_final_tab2 starting_address c_final_tab2
+2 c_final_tab2 one c_final_tab2
+
+7 c_final_tab1 c_final_tab2:0
+1 arrow one arrow
+3 copy
+
+check1:4 instruction one  do_add
+3 check2
+do_add:1 arrow one arrow
+7 arrow tab1
+7 tab1:0 final_tab1
+
+1 arrow one arrow
+7 arrow tab2
+7 tab2:0 final_tab2
+
+1 arrow one arrow
+7 arrow tab3
+7 tab3:0 result_tab
+
+1 final_tab1 starting_address final_tab1
+2 final_tab1 one final_tab1
+
+1 final_tab2 starting_address final_tab2
+2 final_tab2 one final_tab2
+
+1 result_tab starting_address result_tab
+2 result_tab one result_tab 
+
+1 final_tab1:0 final_tab2:0 result_tab:0
+1 arrow one arrow
+3 copy
+
+check2:4 instruction two do_sub
+3 check3
+do_sub:1 arrow one arrow
+7 arrow s_tab1
+7 s_tab1:0 s_final_tab1
+
+1 arrow one arrow
+7 arrow s_tab2
+7 s_tab2:0 s_final_tab2
+
+1 arrow one arrow
+7 arrow s_tab3
+7 s_tab3:0 s_result_tab
+
+1 s_final_tab1 starting_address s_final_tab1
+2 s_final_tab1 one s_final_tab1
+
+1 s_final_tab2 starting_address s_final_tab2
+2 s_final_tab2 one s_final_tab2
+
+1 s_result_tab starting_address s_result_tab
+2 s_result_tab one s_result_tab
+
+2 s_final_tab1:0 s_final_tab2:0 s_result_tab:0
+ 
+1 arrow one arrow
+3 copy
+
+check3:4 instruction three do_jump3
+3 check4
+do_jump3:1 arrow one arrow
+7 arrow j_tab
+7 j_tab:0 j_final_tab
+
+1 j_final_tab starting_address j_final_tab
+2 j_final_tab one j_final_tab
+
+7  j_final_tab arrow
+3 copy
+
+check4:4 instruction four do_ch_eq
+3 check5
+
+do_ch_eq:1 arrow one arrow
+7 arrow eq_tab1
+7 eq_tab1:0 eq_final_tab1
+
+1 arrow one arrow
+7 arrow eq_tab2
+7 eq_tab2:0 eq_final_tab2
+
+1 arrow one arrow
+7 arrow eq_tab3
+7 eq_tab3:0 eq_jump_tab
+
+1 eq_final_tab1 starting_address eq_final_tab1
+2 eq_final_tab1 one eq_final_tab1
+
+1 eq_final_tab2 starting_address eq_final_tab2
+2 eq_final_tab2 one eq_final_tab2
+
+1 eq_jump_tab starting_address eq_jump_tab
+2 eq_jump_tab one eq_jump_tab
+
+4 eq_final_tab1:0 eq_final_tab2:0 jump4
+next4:1 arrow one arrow
+3 copy
+
+jump4:7 eq_jump_tab arrow
+3 copy
+
+check5:4 instruction five do_ch_less
+3 check7
+
+do_ch_less:1 arrow one arrow
+7 arrow less_tab1
+7 less_tab1:0 less_final_tab1
+
+1 arrow one arrow
+7 arrow less_tab2
+7 less_tab2:0 less_final_tab2
+
+1 arrow one arrow
+7 arrow less_tab3
+7 less_tab3:0 less_jump_tab
+
+1 less_final_tab1 starting_address less_final_tab1
+2 less_final_tab1 one less_final_tab1
+
+1 less_final_tab2 starting_address less_final_tab2
+2 less_final_tab2 one less_final_tab2
+
+1 less_jump_tab starting_address less_jump_tab
+2 less_jump_tab one less_jump_tab
+
+5  less_final_tab1:0 less_final_tab2:0 jump5
+next5:1 arrow one arrow
+3 copy
+
+jump5:7 less_jump_tab arrow
+3 copy
+
+check7:4 instruction seven do_copy
+3 check9
+do_copy:1 arrow one arrow
+7 arrow copy_tab1
+7 copy_tab1:0 copy_final_tab1
+
+1 arrow one arrow
+7 arrow copy_tab2
+7 copy_tab2:0 copy_final_tab2
+
+1 copy_final_tab1 starting_address copy_final_tab1
+2 copy_final_tab1 one copy_final_tab1
+
+1 copy_final_tab2 starting_address copy_final_tab2
+2 copy_final_tab2 one copy_final_tab2
+
+7 copy_final_tab1:0 copy_final_tab2:0
+
+1 arrow one arrow
+3 copy
+
+check9:4 instruction nine do_stop
+do_stop:9
+
+j_final_tab:0
+eq_jump_tab:0
+less_jump_tab:0
+c_final_tab1:0
+instruction:0
+zero:0
+one:1
+two:2
+three:3
+four:4
+five:5
+seven:7
+nine:9
+s1:3 3 0 45 7 0 0 9
+
