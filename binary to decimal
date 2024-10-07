@@ -1,0 +1,27 @@
+3 start
+last_address:100
+number:16
+
+start:7 last_address store_address
+7 number  help
+
+check1:5 help two check2
+sub:2 help two help
+1 count one count
+3 check1
+
+check2:5 count one do_copy
+7 help store_address:0
+7 count help
+7 zero count
+2 store_address one store_address
+3 check1
+do_copy:7 store_address address
+7 help address:0
+stop:9
+
+one:1
+two:2
+count:0
+help:0
+zero:0
